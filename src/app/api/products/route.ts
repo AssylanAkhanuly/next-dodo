@@ -1,7 +1,8 @@
 import { dodopayments } from "@/shared/lib/dodo-payments";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export const GET = async () => {
-  const products = await dodopayments.products.list();
+export const GET = async (request: NextRequest) => {
+  const recurring  = Boolean(request.nextUrl.searchParams.get("recurring"))
+  const products = await dodopayments.products.list({recurring});
   return NextResponse.json(products.items);
 };

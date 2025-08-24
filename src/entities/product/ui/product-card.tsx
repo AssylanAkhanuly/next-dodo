@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardTitle,
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardTitle,
 } from "@/components/ui/card";
 
 const ProductCard = ({
@@ -23,9 +23,9 @@ const ProductCard = ({
   return (
     <Card>
       <CardContent className="flex flex-col gap-4">
-        <CardTitle className="text-accent-foreground text-xl text-center">
+        {/* <CardTitle className="text-accent-foreground text-xl text-center">
           {price} {currency}
-        </CardTitle>
+        </CardTitle> */}
         <CardTitle className="text-center">{title}</CardTitle>
         <CardDescription className="text-center">{description}</CardDescription>
 
